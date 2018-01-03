@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/WebApi/bin/Debug/netcoreapp2.0/WebApi.dll",
+            "program": "${workspaceFolder}/src/bin/Debug/netcoreapp2.0/AngularASPNETCore2WebApiAuth.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/WebApi",
+            "cwd": "${workspaceFolder}/src",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
             "launchBrowser": {

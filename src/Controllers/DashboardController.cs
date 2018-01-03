@@ -1,10 +1,11 @@
-﻿
+
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using AngularASPNETCore2WebApiAuth.Data;
 using AngularASPNETCore2WebApiAuth.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -19,9 +20,9 @@ namespace AngularASPNETCore2WebApiAuth.Controllers
     private readonly ClaimsPrincipal _caller;
     private readonly ApplicationDbContext _appDbContext;
 
-    public DashboardController(ClaimsPrincipal caller, UserManager<AppUser> userManager, ApplicationDbContext appDbContext)
+    public DashboardController(UserManager<AppUser> userManager, ApplicationDbContext appDbContext, IHttpContextAccessor httpContextAccessor)
     {
-      _caller = caller;
+      _caller = httpContextAccessor.HttpContext.User;
       _appDbContext = appDbContext;
     }
 
@@ -30,6 +31,7 @@ namespace AngularASPNETCore2WebApiAuth.Controllers
     public async Task<IActionResult> Home()
     {
       // retrieve the user info
+      //HttpContext.User
       var userId = _caller.Claims.Single(c => c.Type == "id");
       var customer = await _appDbContext.Customers.Include(c => c.Identity).SingleAsync(c => c.Identity.Id == userId.Value);
       

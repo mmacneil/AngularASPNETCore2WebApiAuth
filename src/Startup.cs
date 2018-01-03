@@ -20,6 +20,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.IdentityModel.Tokens;
 
 
@@ -50,7 +51,7 @@ namespace AngularASPNETCore2WebApiAuth
       // Register the ConfigurationBuilder instance of FacebookAuthSettings
       services.Configure<FacebookAuthSettings>(Configuration.GetSection(nameof(FacebookAuthSettings)));
 
-      services.AddTransient(s => s.GetService<IHttpContextAccessor>().HttpContext.User);
+      services.TryAddTransient<IHttpContextAccessor, HttpContextAccessor>();
 
       // jwt wire up
       // Get options from app settings
