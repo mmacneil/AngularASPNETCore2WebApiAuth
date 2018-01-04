@@ -53,7 +53,7 @@ namespace AngularASPNETCore2WebApiAuth.Controllers
       }
 
       // 3. we've got a valid token so we can request user data from fb
-      var userInfoResponse = await Client.GetStringAsync($"https://graph.facebook.com/v2.8/me?fields=id,email,first_name,last_name,name,gender,birthday,picture&access_token={model.AccessToken}");
+      var userInfoResponse = await Client.GetStringAsync($"https://graph.facebook.com/v2.8/me?fields=id,email,first_name,last_name,name,gender,locale,birthday,picture&access_token={model.AccessToken}");
       var userInfo = JsonConvert.DeserializeObject<FacebookUserData>(userInfoResponse);
 
       // 4. ready to create the local user account (if necessary) and jwt
@@ -75,7 +75,7 @@ namespace AngularASPNETCore2WebApiAuth.Controllers
 
         if (!result.Succeeded) return new BadRequestObjectResult(Errors.AddErrorsToModelState(result, ModelState));
 
-        await _appDbContext.Customers.AddAsync(new Customer { IdentityId = appUser.Id, Location = "" });
+        await _appDbContext.Customers.AddAsync(new Customer { IdentityId = appUser.Id, Location = "",Locale = userInfo.Locale,Gender = userInfo.Gender});
         await _appDbContext.SaveChangesAsync();
       }
 

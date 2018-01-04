@@ -164,7 +164,9 @@ namespace AngularASPNETCore2WebApiAuth.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Gender = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     IdentityId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    Locale = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Location = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>

@@ -84,7 +84,11 @@ namespace AngularASPNETCore2WebApiAuth.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("Gender");
+
                     b.Property<string>("IdentityId");
+
+                    b.Property<string>("Locale");
 
                     b.Property<string>("Location");
 

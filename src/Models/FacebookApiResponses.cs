@@ -13,6 +13,7 @@ namespace AngularASPNETCore2WebApiAuth.Models
     [JsonProperty("last_name")]
     public string LastName { get; set; }
     public string Gender { get; set; }
+    public string Locale { get; set; }
     public FacebookPictureData Picture { get; set; }
   }
 

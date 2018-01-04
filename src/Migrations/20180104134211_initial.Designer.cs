@@ -11,7 +11,7 @@ using System;
 namespace AngularASPNETCore2WebApiAuth.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20180103200309_initial")]
+    [Migration("20180104134211_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -85,7 +85,11 @@ namespace AngularASPNETCore2WebApiAuth.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("Gender");
+
                     b.Property<string>("IdentityId");
+
+                    b.Property<string>("Locale");
 
                     b.Property<string>("Location");
 

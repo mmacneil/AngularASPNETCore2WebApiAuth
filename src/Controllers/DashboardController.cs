@@ -41,7 +41,10 @@ namespace AngularASPNETCore2WebApiAuth.Controllers
         customer.Identity.FirstName,
         customer.Identity.LastName,
         customer.Identity.PictureUrl,
-        customer.Identity.FacebookId
+        customer.Identity.FacebookId,
+        customer.Location,
+        customer.Locale,
+        customer.Gender
       });
     }
   }
