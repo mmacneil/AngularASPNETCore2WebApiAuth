@@ -1,10 +1,10 @@
 # AngularASPNETCore2WebApiAuth
 Sample project demonstrating jwt-based authentication with an Angular (v5.2.1) frontend and ASP.NET Core 2 WebApi. Includes both local user registration with .NET Core Identity membership and facebook login scenarios.
 
-Facebook login flow
+### Facebook flow
 <img src="https://fullstackmark.com/img/posts/13/angular-spa-aspnet-core-web-api-authentication-with-facebook-login-flow.gif" />
 
-Email signup flow
+### Email flow
 <img src="https://fullstackmark.com/img/posts/13/angular-spa-aspnet-core-web-api-authentication-with-email-signup-flow.gif" />
 
 ## Development Environment
