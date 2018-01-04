@@ -1,5 +1,5 @@
 # AngularASPNETCore2WebApiAuth
-Sample project demonstrating jwt-based authentication with an Angular (v5.2.1) frontend and ASP.NET Core 2 WebApi. Includes both local user registration with .NET Core identity membership and facebook login scenarios.
+Sample project demonstrating jwt-based authentication with an Angular (v5.2.1) frontend and ASP.NET Core 2 WebApi. Includes both local user registration with .NET Core Identity membership and facebook login scenarios.
 
 ## Development Environment
 - Sql Server Express 2017 & Sql Server Management Studio 2017
