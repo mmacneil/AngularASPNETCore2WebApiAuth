@@ -8,26 +8,21 @@
     <script src="assets/util.js"></script>
   </head> 
   <body>
-  <script>    
- 
-   // if we don't receive an access token then login failed and/or the user has not connected properly
-  var accessToken = getParameterByName("#access_token");
-  var status = "failed";
-   var message = {};
-   if (accessToken) {  
-    //message = "{\"status\" : true, \"accessToken\": \"" + accessToken + "\" }";
-     message.status = true;
-     message.accessToken = accessToken;
-   }
-  else
-  {
-    //message = "{\"status\" : false, \"error\": \"" + getParameterByName("error") + "\", \"errorDescription\": \"" + getParameterByName("error_description") + "\" }";
-    message.status = false;
-    message.error = getParameterByName("error");
-    message.errorDescription = getParameterByName("error_description");
-  }
-
-  window.opener.postMessage(JSON.stringify(message), "http://localhost:5000");    
+  <script>
+      // if we don't receive an access token then login failed and/or the user has not connected properly
+      var accessToken = getParameterByName("access_token");
+      var message = {};
+      if (accessToken) {
+        message.status = true;
+        message.accessToken = accessToken;
+      }
+      else
+      {
+        message.status = false;
+        message.error = getParameterByName("error");
+        message.errorDescription = getParameterByName("error_description");
+      }
+      window.opener.postMessage(JSON.stringify(message), "http://localhost:5000");
   </script>
   </body>
 </html>
