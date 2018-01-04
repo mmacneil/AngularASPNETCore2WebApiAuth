@@ -19,4 +19,5 @@ To build and run the project using the command line:
 
 Of course, you can also run it from either Visual Studio 2017 or Visual Studio Code with the IDE handling most of the steps above.  If you have issues, try running the above steps from the command line to ensure things are setup properly.
 
-
+### Facebook App Setup
+You're free to use the demo fb app that the project is already configured with.  To setup and use your own facebook application simply go through...
