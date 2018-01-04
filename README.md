@@ -17,10 +17,10 @@ Sample project based on <a href="https://fullstackmark.com/post/13/jwt-authentic
 
 ## Setup
 To build and run the project using the command line:
-1. Install npm packages with `\src>npm install` in the `src` directory.
-2. Restore nuget packages with `\src>dotnet restore` in the `src` directory.
-3. Create the database with `\src>dotnet ef database update` in the `src` directory.
-4. Run the project with `\src>dotnet run` in the `src` directory.
+1. Install npm packages with `src>npm install` in the `src` directory.
+2. Restore nuget packages with `src>dotnet restore` in the `src` directory.
+3. Create the database with `src>dotnet ef database update` in the `src` directory.
+4. Run the project with `src>dotnet run` in the `src` directory.
 5. Point your browser to **http://localhost:5000**.
 
 Of course, you can also run it from either Visual Studio 2017 or Visual Studio Code with the IDE handling most of the steps above.  If you have issues, try running the above steps from the command line to ensure things are setup properly.
