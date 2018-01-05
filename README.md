@@ -26,4 +26,4 @@ To build and run the project using the command line:
 Of course, you can also run it from either Visual Studio 2017 or Visual Studio Code with the IDE handling most of the steps above.  If you have issues, try running the above steps from the command line to ensure things are setup properly.
 
 ## Facebook App Setup
-You're free to use the demo facebook app _Fullstack Cafe_ that the project is already configured with.  To setup and use your own application <a href="https://fullstackmark.com/post/13/jwt-authentication-with-aspnet-core-2-web-api-angular-5-net-core-identity-and-facebook-login#creating-a-facebook-application>follow the steps detailed on the post</a>.
+You're free to use the demo facebook app _Fullstack Cafe_ that the project is already configured with.  To setup and use your own application <a href="https://fullstackmark.com/post/13/jwt-authentication-with-aspnet-core-2-web-api-angular-5-net-core-identity-and-facebook-login#creating-a-facebook-application">follow the steps detailed on the post</a>.
