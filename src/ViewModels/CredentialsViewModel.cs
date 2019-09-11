@@ -1,6 +1,3 @@
-﻿
-using AngularASPNETCore2WebApiAuth.ViewModels.Validations;
-using FluentValidation.Attributes;
 
 namespace AngularASPNETCore2WebApiAuth.ViewModels
 {
